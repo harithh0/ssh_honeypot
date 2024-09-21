@@ -1,6 +1,6 @@
 # SSH Honeypot
 
-This project is an SSH honeypot designed to log authentication attempts and gather geolocation data of the connecting clients. It uses the `paramiko` library to simulate an SSH server and logs connection details for analysis.
+This project is a simple SSH honeypot designed to log authentication attempts and gather geolocation data of the connecting clients. It uses the `paramiko` library to simulate an SSH server and logs connection details for analysis.
 
 
 ## Screenshot of logs:
