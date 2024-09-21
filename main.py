@@ -70,9 +70,12 @@ def handle_connection(client_sock, client_addr):
 
 
 def main():
+
+    IP = ""
+    PORT = 22
     server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    server_sock.bind(("", 22))
+    server_sock.bind((IP, PORT))
     while True:
         server_sock.listen(223)
         client_sock, client_addr = server_sock.accept()
