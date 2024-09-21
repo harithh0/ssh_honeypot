@@ -36,7 +36,6 @@ def get_location(ip):
                 format += "bogus ip (maybe lan IP?)"
                 return format
             format += f"{data.get('city')}, {data.get('region')}, {data.get('country')}"
-
     except Exception as e:
         print("error:", e)
     return format
@@ -57,7 +56,7 @@ class SSHServer(paramiko.ServerInterface):
 def handle_connection(client_sock, client_addr):
     transport = paramiko.Transport(
         client_sock
-    )  # take this socket and use it to run as an ssh server
+    )  # take this socket and use it to run as  an ssh server
     transport.local_version = "SSH-2.0-OpenSSH_5.1"
     if not os.path.exists("key"):
         createRSAKey()
